@@ -14,7 +14,7 @@ namespace AuctionService.Entities
 
         public string Color { get; set; }
 
-        public string Mileage { get; set; }
+        public int Mileage { get; set; }
 
         public string ImageUrl { get; set; }
 
