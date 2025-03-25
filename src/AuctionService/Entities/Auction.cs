@@ -20,6 +20,7 @@
 
         public DateTime AuctionEnd { get; set; }
 
+        //nav properties
         public Status Status { get; set; } = Status.Live;
 
         public Item Item { get; set; }
