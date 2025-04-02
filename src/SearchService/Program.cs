@@ -21,6 +21,14 @@ builder.Services.AddMassTransit(x =>
 
     x.UsingRabbitMq((context, cfg) =>
     {
+        cfg.Host("localhost", 5675
+            , "/", h =>
+        {
+            h.Username("guest");
+            h.Password("guest");
+        });
+
+
         cfg.ReceiveEndpoint("search-auction-created", e =>
         {
             e.UseMessageRetry(r => r.Interval(5, 5));
